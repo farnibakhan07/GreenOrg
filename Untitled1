@@ -1,0 +1,9 @@
+$rowcount = mysql_num_rows($query);
+			    if($rowcount == true)
+			    {
+			        $_SESSION['username'] = $user;
+			        $_SESSION['user_id'] = $query;
+			     // echo "<script type='text/javascript'>alert('$user');</script>";
+                    header( "Location: testing_method.php" ); 
+                    die;
+			    }
